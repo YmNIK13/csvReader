@@ -47,5 +47,11 @@ namespace analiticTable
 
             this.Text = table.NameTable;
         }
+
+        private void miCreateProgect_Click(object sender, EventArgs e)
+        {
+            OpenProjectDialog pd = new OpenProjectDialog();
+            pd.ShowDialog();
+        }
     }
 }

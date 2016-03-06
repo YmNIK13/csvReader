@@ -51,9 +51,21 @@
     <Compile Include="CSVReaderForm.Designer.cs">
       <DependentUpon>CSVReaderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OpenProjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpenProjectDialog.Designer.cs">
+      <DependentUpon>OpenProjectDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableCSV.cs" />
+    <EmbeddedResource Include="CSVReaderForm.resx">
+      <DependentUpon>CSVReaderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OpenProjectDialog.resx">
+      <DependentUpon>OpenProjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

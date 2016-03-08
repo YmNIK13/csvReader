@@ -11,6 +11,9 @@ namespace analiticTable
 {
     public partial class CSVReaderForm : Form
     {
+        private DataBaseCSV DB;
+
+
         public CSVReaderForm()
         {
             InitializeComponent();
@@ -52,6 +55,19 @@ namespace analiticTable
         {
             OpenProjectDialog pd = new OpenProjectDialog();
             pd.ShowDialog();
+
+            if (pd.DialogResult == DialogResult.OK)
+            {
+                //Создаем новую БД
+                DB = new DataBaseCSV(pd.GetPathPriject, pd.GetListBranch);
+
+                tv_MainTree.Nodes.Clear();
+
+                foreach (Branch branch in DB.listBranch)
+                {
+                    tv_MainTree.Nodes.Add(branch.filesNode.GetTreeNodeFile);
+                }
+            }            
         }
     }
 }

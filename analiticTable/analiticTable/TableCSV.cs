@@ -6,11 +6,9 @@ using System.Text;
 
 namespace analiticTable
 {
-    public class TableCSV
+    public class TableCSV : FileProject
     {
-        private string _path;
-        private string _nameFie;
-        private string _extension;
+
         private char[] _separators;
 
 
@@ -18,19 +16,17 @@ namespace analiticTable
 
 
 
-        public TableCSV(string path, char separator = ';')
-        {
-            this._path = path;
-            FileInfo file = new FileInfo(path);
+        public TableCSV(string path, char separator = ';'):base(path)
+        {            
             this._separators = new char[1];
             this._separators[0] = separator;
 
+            FileInfo file = new FileInfo(path);
             CreateTable(file);
         }
 
-        public TableCSV(string path, char[] separator)
+        public TableCSV(string path, char[] separator) : base(path)
         {
-            this._path = path;
             FileInfo file = new FileInfo(path);
             this._separators.CopyTo(separator, 0);
 
@@ -54,9 +50,6 @@ namespace analiticTable
                 }
             }
         }
-
-
-
 
         private string _nameTable;
 

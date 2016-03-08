@@ -29,8 +29,22 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Узел1");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Корень", new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Узел14");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Узел1", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Узел10");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Узел11");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Узел12");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Узел13");
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Узел2", new System.Windows.Forms.TreeNode[] {
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Корень", new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode8});
             this.mainMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.miCreateProgect = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,13 +104,29 @@
             this.tv_MainTree.Name = "tv_MainTree";
             treeNode1.Name = "Узел1";
             treeNode1.Text = "Узел1";
-            treeNode2.BackColor = System.Drawing.Color.Aqua;
-            treeNode2.ForeColor = System.Drawing.Color.Blue;
-            treeNode2.Name = "root";
-            treeNode2.Text = "Корень";
-            treeNode2.ToolTipText = "Корнище";
+            treeNode2.Name = "Узел14";
+            treeNode2.Text = "Узел14";
+            treeNode3.Name = "Узел1";
+            treeNode3.Tag = "df";
+            treeNode3.Text = "Узел1";
+            treeNode4.Name = "Узел10";
+            treeNode4.Text = "Узел10";
+            treeNode5.Name = "Узел11";
+            treeNode5.Text = "Узел11";
+            treeNode6.Name = "Узел12";
+            treeNode6.Text = "Узел12";
+            treeNode7.Name = "Узел13";
+            treeNode7.Text = "Узел13";
+            treeNode8.Name = "Узел2";
+            treeNode8.Text = "Узел2";
+            treeNode9.BackColor = System.Drawing.Color.Aqua;
+            treeNode9.ForeColor = System.Drawing.Color.Blue;
+            treeNode9.Name = "root";
+            treeNode9.Tag = "dddddd";
+            treeNode9.Text = "Корень";
+            treeNode9.ToolTipText = "Корнище";
             this.tv_MainTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode9});
             this.tv_MainTree.Size = new System.Drawing.Size(186, 378);
             this.tv_MainTree.TabIndex = 1;
             // 

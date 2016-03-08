@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Branch.cs" />
     <Compile Include="ColumnCSV.cs" />
     <Compile Include="CSVReaderForm.cs">
       <SubType>Form</SubType>
@@ -51,6 +52,8 @@
     <Compile Include="CSVReaderForm.Designer.cs">
       <DependentUpon>CSVReaderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataBaseCSV.cs" />
+    <Compile Include="FileProject.cs" />
     <Compile Include="OpenProjectDialog.cs">
       <SubType>Form</SubType>
     </Compile>

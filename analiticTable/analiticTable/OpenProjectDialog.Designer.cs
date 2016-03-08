@@ -86,6 +86,7 @@
             this.tbPathToProject.Name = "tbPathToProject";
             this.tbPathToProject.Size = new System.Drawing.Size(305, 20);
             this.tbPathToProject.TabIndex = 7;
+            this.tbPathToProject.Text = "D:\\igov-analitic\\eclipse\\workspace\\i";
             this.tbPathToProject.TextChanged += new System.EventHandler(this.tbPathToProject_TextChanged);
             // 
             // btnSelectProject
@@ -154,6 +155,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstBoxPath.FormattingEnabled = true;
+            this.lstBoxPath.Items.AddRange(new object[] {
+            "\\wf-base",
+            "\\wf-base\\src\\main\\resources\\data"});
             this.lstBoxPath.Location = new System.Drawing.Point(6, 19);
             this.lstBoxPath.Name = "lstBoxPath";
             this.lstBoxPath.Size = new System.Drawing.Size(428, 173);

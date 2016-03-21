@@ -50,10 +50,15 @@
             this.miCreateProgect = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tv_MainTree = new System.Windows.Forms.TreeView();
-            this.dgMainTable = new System.Windows.Forms.DataGridView();
             this.fileCSV = new System.Windows.Forms.OpenFileDialog();
+            this.splitPanelMain = new System.Windows.Forms.SplitContainer();
+            this.dgMainTable = new System.Windows.Forms.DataGridView();
+            this.tv_MainTree = new System.Windows.Forms.TreeView();
             this.mainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitPanelMain)).BeginInit();
+            this.splitPanelMain.Panel1.SuspendLayout();
+            this.splitPanelMain.Panel2.SuspendLayout();
+            this.splitPanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgMainTable)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,10 +102,40 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
+            // fileCSV
+            // 
+            this.fileCSV.Filter = "\"*.csv - файлы|*.csv|Все файлы|*.*\"";
+            // 
+            // splitPanelMain
+            // 
+            this.splitPanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitPanelMain.Location = new System.Drawing.Point(0, 24);
+            this.splitPanelMain.Name = "splitPanelMain";
+            // 
+            // splitPanelMain.Panel1
+            // 
+            this.splitPanelMain.Panel1.Controls.Add(this.tv_MainTree);
+            // 
+            // splitPanelMain.Panel2
+            // 
+            this.splitPanelMain.Panel2.Controls.Add(this.dgMainTable);
+            this.splitPanelMain.Size = new System.Drawing.Size(884, 378);
+            this.splitPanelMain.SplitterDistance = 185;
+            this.splitPanelMain.TabIndex = 3;
+            // 
+            // dgMainTable
+            // 
+            this.dgMainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMainTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgMainTable.Location = new System.Drawing.Point(0, 0);
+            this.dgMainTable.Name = "dgMainTable";
+            this.dgMainTable.Size = new System.Drawing.Size(695, 378);
+            this.dgMainTable.TabIndex = 3;
+            // 
             // tv_MainTree
             // 
-            this.tv_MainTree.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tv_MainTree.Location = new System.Drawing.Point(0, 24);
+            this.tv_MainTree.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tv_MainTree.Location = new System.Drawing.Point(0, 0);
             this.tv_MainTree.Name = "tv_MainTree";
             treeNode1.Name = "Узел1";
             treeNode1.Text = "Узел1";
@@ -127,29 +162,16 @@
             treeNode9.ToolTipText = "Корнище";
             this.tv_MainTree.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode9});
-            this.tv_MainTree.Size = new System.Drawing.Size(186, 378);
-            this.tv_MainTree.TabIndex = 1;
-            // 
-            // dgMainTable
-            // 
-            this.dgMainTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgMainTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgMainTable.Location = new System.Drawing.Point(186, 24);
-            this.dgMainTable.Name = "dgMainTable";
-            this.dgMainTable.Size = new System.Drawing.Size(698, 378);
-            this.dgMainTable.TabIndex = 2;
-            // 
-            // fileCSV
-            // 
-            this.fileCSV.Filter = "\"*.csv - файлы|*.csv|Все файлы|*.*\"";
+            this.tv_MainTree.Size = new System.Drawing.Size(185, 378);
+            this.tv_MainTree.TabIndex = 2;
+            this.tv_MainTree.DoubleClick += new System.EventHandler(this.tv_MainTree_DoubleClick);
             // 
             // CSVReaderForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 402);
-            this.Controls.Add(this.dgMainTable);
-            this.Controls.Add(this.tv_MainTree);
+            this.Controls.Add(this.splitPanelMain);
             this.Controls.Add(this.mainMenu);
             this.MainMenuStrip = this.mainMenu;
             this.Name = "CSVReaderForm";
@@ -157,6 +179,10 @@
             this.Load += new System.EventHandler(this.CSVReaderForm_Load);
             this.mainMenu.ResumeLayout(false);
             this.mainMenu.PerformLayout();
+            this.splitPanelMain.Panel1.ResumeLayout(false);
+            this.splitPanelMain.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitPanelMain)).EndInit();
+            this.splitPanelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgMainTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -168,11 +194,12 @@
         private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.TreeView tv_MainTree;
-        private System.Windows.Forms.DataGridView dgMainTable;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog fileCSV;
         private System.Windows.Forms.ToolStripMenuItem miCreateProgect;
+        private System.Windows.Forms.SplitContainer splitPanelMain;
+        private System.Windows.Forms.TreeView tv_MainTree;
+        private System.Windows.Forms.DataGridView dgMainTable;
     }
 }
 

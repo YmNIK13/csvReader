@@ -69,5 +69,10 @@ namespace analiticTable
                 }
             }            
         }
+
+        private void tv_MainTree_DoubleClick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -86,7 +86,7 @@
             this.tbPathToProject.Name = "tbPathToProject";
             this.tbPathToProject.Size = new System.Drawing.Size(305, 20);
             this.tbPathToProject.TabIndex = 7;
-            this.tbPathToProject.Text = "D:\\igov-analitic\\eclipse\\workspace\\i";
+            this.tbPathToProject.Text = "D:\\igov-analitic\\workspace\\ecl\\i";
             this.tbPathToProject.TextChanged += new System.EventHandler(this.tbPathToProject_TextChanged);
             // 
             // btnSelectProject
